@@ -1,0 +1,50 @@
+<html>
+<head>
+  <style>
+  html, body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:black;
+    color:red;
+  }
+
+  button {
+    padding: 10px 20px;
+    border: none;
+    background: none;
+    cursor: pointer;
+
+    font-family: "Source Code Pro";
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 30px;
+    color:red;
+  }
+
+
+
+
+  </style>
+  </head>
+
+    <body>
+     <center>
+     <h1>Maze Game</h1>
+     controls
+     <p> w-->forward  s-->backward  a-->left   d-->right</p>
+     <button id="play" onclick="play()">Play</button>
+
+    </center>
+    <script>
+    function play()
+    {
+      window.location.replace("maze.html");
+    }
+
+
+    </script>
+  </body>
+</html>

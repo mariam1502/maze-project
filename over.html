@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      .s
+      {
+        border-style:solid;
+        border-color:black;
+        width:50%;
+
+      }
+      html, body {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color:black;
+        color:red;
+      }
+
+      button {
+        padding: 10px 20px;
+        border: none;
+        background: none;
+        cursor: pointer;
+
+        font-family: "Source Code Pro";
+        font-weight: 900;
+        text-transform: uppercase;
+        font-size: 30px;
+        color:red;
+
+
+      }
+
+      </style>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js"></script>
+
+      <script src="https://cdn.jsdelivr.net/npm/three@0.115.0/build/three.min.js"></script>
+  </head>
+  <body>
+    <center>
+      <div >
+    <h1>Game Over !</h1>
+    </div>
+    <br>
+    <button id="play" onclick="play()">play again</button>
+
+
+    <script>
+      function play()
+      {
+        window.location.replace("maze.html");
+      }
+
+
+         var stream = "lose.wav";
+         var audioLoader = new THREE.AudioLoader();
+            var listener = new THREE.AudioListener();
+
+            var audio = new THREE.Audio(listener);
+            audioLoader.load(stream, function(buffer) {
+                audio.setBuffer(buffer);
+                audio.setLoop(false);
+                audio.play(true);
+            });
+
+
+    </script>
+
+    </center>
+  </body>
+</html>
